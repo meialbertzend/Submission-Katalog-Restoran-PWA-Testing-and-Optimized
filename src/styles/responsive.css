@@ -1,0 +1,86 @@
+/* Media query untuk layar dengan lebar minimal 660px */
+@media screen and (min-width: 660px) {
+    .app-bar__logo {
+        margin-right: auto;
+        /* Memindahkan logo ke sisi kiri */
+    }
+
+    #hamburgerButton {
+        display: none;
+        /* Menyembunyikan hamburger button */
+    }
+
+    .app-bar__nav {
+        position: static;
+        /* Mengubah posisi menu navigasi menjadi statis */
+        margin-top: 0;
+        left: auto;
+        width: auto;
+    }
+
+    .app-bar__nav ul {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        /* Menyusun tautan secara horizontal */
+    }
+
+    .app-bar__nav li {
+        margin: 0 10px;
+        /* Menambahkan jarak antara tautan */
+    }
+
+    .app-bar__nav a {
+        white-space: nowrap;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .restaurant-list {
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        gap: 16px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .app-bar__nav {
+        margin-top: 50px;
+    }
+}
+
+/* Media query untuk viewport width >= 1200px */
+@media screen and (min-width: 1200px) {
+    .jumbotron {
+        background-size: 1000px auto;
+        /* Lebar minimal 1000px */
+    }
+}
+
+/* Untuk viewport width < 1200px (default) */
+.jumbotron {
+    background-size: cover;
+    /* Full-width */
+}
+
+@media screen and (min-width: 1023px) {
+    .detail-card {
+        max-width: 1020px;
+        /* Batasi lebar maksimum */
+        margin: 20px auto;
+    }
+}
+
+@media screen and (min-width: 629px) {
+
+    .review-card,
+    .review-form {
+        max-width: 530px;
+        margin: 20px auto;
+    }
+}
+
+@media screen and (min-width: 659px) {
+    .jumbotron {
+        background-image: linear-gradient(rgba(10, 10, 225, 0.5), rgba(0, 0, 5, .5)), url('../public/images/heros/hero-image_2-large.jpg');
+    }
+}
